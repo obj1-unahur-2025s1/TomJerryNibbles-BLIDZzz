@@ -1,17 +1,56 @@
 import tomJerryNibbles.*
 
 describe "Grupo de test" {
-
   test "test 1" {
-    assert.equals(100, 50+50)
+    assert.equals(100, 50 + 50)
   }
-
+  
   test "test 3" {
     assert.that(true)
   }
-
+  
   test "test 4" {
     assert.notThat(false)
   }
+}
 
+test "Caso de prueba" {
+  assert.equals(tom.velocidadMaxima(), 10)
+  tom.comer(jerry)
+  assert.equals(tom.velocidadMaxima(), 15.2)
+  tom.correr(24)
+  assert.equals(tom.velocidadMaxima(), 14)
+  tom.comer(nibbles)
+  assert.equals(tom.velocidadMaxima(), 18.7)
+  jerry.cumpleAños()
+  tom.comer(jerry)
+  assert.equals(tom.velocidadMaxima(), 25.9)
+  tom.correr(38)
+  assert.equals(tom.velocidadMaxima(), 24)
+}
+
+test "Caso de prueba 2" {
+  assert.equals(tom.velocidadMaxima(), 10)
+  assert.that(tom.puedeCazarRaton(10))
+  tom.comerRatonADistancia(nitt, 10)
+  assert.equals(tom.velocidadMaxima(), 15.7)
+  assert.that(tom.puedeCazarRaton(30))
+  tom.comerRatonADistancia(nibbles, 30)
+  assert.equals(tom.velocidadMaxima(), 18.9)
+  assert.that(tom.puedeCazarRaton(50))
+  tom.comerRatonADistancia(jerry, 50)
+  assert.equals(tom.velocidadMaxima(), 21.6)
+}
+
+test "Caso de prueba 3" {
+  assert.equals(tom.velocidadMaxima(), 10)
+  assert.that(tom.puedeCazarRaton(20))
+  tom.comerRatonADistancia(nitt, 20)
+  assert.equals(tom.velocidadMaxima(), 15.2)
+  assert.that(tom.puedeCazarRaton(15))
+  tom.comerRatonADistancia(nibbles, 15)
+  assert.equals(tom.velocidadMaxima(), 19.15)
+  assert.that(tom.puedeCazarRaton(40))
+  tom.comerRatonADistancia(jerry, 40)
+  assert.equals(tom.velocidadMaxima(), 22.35)
 }
